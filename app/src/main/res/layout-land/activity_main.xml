@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="activityBinding"
+            type="ua.com.anker.viewmodel.activity.ActivityBinding" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+            <include layout="@layout/button_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:listener="@{(v, focused) -> focused ? activityBinding.sendMenuFocusedEvent() : void }"/>
+            <include layout="@layout/button_menu_stats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:listener="@{(v, focused) -> focused ? activityBinding.sendFinanceStatsFocusedEvent() : void }"/>
+            <include layout="@layout/button_menu_editor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:listener="@{(v, focused) -> focused ? activityBinding.sendMenuEditorFocusedEvent() : void }"/>
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/fragment_empty"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</layout>

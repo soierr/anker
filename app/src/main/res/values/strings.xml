@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Anker</string>
+    <!--Main Activity-->
+    <string name="menu_item_1">Menu</string>
+    <string name="menu_item_2">Finance Stats</string>
+    <string name="menu_item_3">Menu\'s Editor</string>
+
+    <string name="tv_menu_stats">Fragment Menu Stats</string>
+    <string name="tv_menu_editor">Fragment Menu Editor</string>
+</resources>
