@@ -6,4 +6,4 @@ This application called to simplify and manage the process of selling goods for 
 
 Potential users are: coffee and(or) fastfood trailers
 
-![Navigation and order making](gifs/ezgif.com-making-order.gif.gif)
+![Navigation and order making](../gifs/ezgif.com-making-order.gif.gif)
